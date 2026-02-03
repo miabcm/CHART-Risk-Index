@@ -264,7 +264,7 @@ const MODELS = {
       { key: "hawai_pac_ind_alask", label: "Recipient is Native Hawaiian/Pacific Islander or American Indian/Alaska Native", coef:  8.335493527, type: "binary" },
       { key: "vad_3_4",             label: "Recipient has BiVAD or TAH (Total artificial Heart)  ⚑FLAG: verify mapping", coef:  6.824203533, type: "binary" },
       { key: "y_ventilator",        label: "Recipient on mechanical ventilation at transplant", coef:  3.564940276, type: "binary" },
-      { key: "y_ecmo",              label: "Recipient on ECMO at transplant  ⚑FLAG: your label says donor, should be recipient", coef:  8.121272772, type: "binary" },
+      { key: "y_ecmo",              label: "Recipient on ECMO at transplant", coef:  8.121272772, type: "binary" },
       { key: "meld_xi",             label: "MELD-XI (numeric)", coef:  0.397523026, type: "numeric" },
       { key: "y_steroids",          label: "Recipient on chronic steroids use at time of transplant", coef:  3.975485211, type: "binary" },
       { key: "hispanic",            label: "Recipient is of Hispanic ethnicity", coef: -3.887255496, type: "binary" },
@@ -297,7 +297,7 @@ const MODELS = {
       { key: "y_steroids",        label: "Chronic steroid use at transplant", coef:  5.18094144, type: "binary" },
       { key: "cmv_pos",           label: "Recipient is CMV+", coef:  3.18028186, type: "binary" },
       { key: "eGFR_TRR_LE55",     label: "Recipient eGFR ≤55 mL/min/1.73m²", coef:  8.720813399, type: "binary" },
-      { key: "INHALED_NO_TRR",    label: "Inhaled nitric oxide at transplant", coef:  8.734116229, type: "binary" },
+      { key: "INHALED_NO_TRR",    label: "Recipient on Life Support: Inhaled nitric oxide (INHALED_NO_TRR)", coef:  8.734116229, type: "binary" },
       { key: "N_RHCROSS",         label: "Rh crossmatch not done", coef:  6.919069117, type: "binary" }
     ],
     categorize: (s) => {
@@ -334,7 +334,7 @@ const MODELS = {
       { key: "b_blood",             label: "Recipient blood type B", coef: -2.876671392, type: "binary" },
       { key: "cod_anoxia",          label: "Donor cause of death: anoxia", coef:  2.159545724, type: "binary" },
       { key: "eGFR_TRR_LE55",       label: "Recipient eGFR ≤55 mL/min/1.73m²", coef:  6.502694286, type: "binary" },
-      { key: "INHALED_NO_TRR",      label: "Inhaled nitric oxide at transplant", coef: 10.6654526, type: "binary" },
+      { key: "INHALED_NO_TRR",      label: "Recipient on Life Support: Inhaled nitric oxide (INHALED_NO_TRR)", coef: 10.6654526, type: "binary" },
       { key: "N_RHCROSS",           label: "Rh crossmatch not done", coef:  4.091961391, type: "binary" }
     ],
     categorize: (s) => {
