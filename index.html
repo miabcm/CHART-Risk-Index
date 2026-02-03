@@ -202,7 +202,7 @@ label.var:hover{
       <div class="card">
         <div class="section-title">1-year mortality risk</div>
         <div class="result">
-          <div class="pill">1-year mortality risk</div>
+        <div class="pill" id="riskTitle">1-year mortality risk</div>
           <div class="big" id="scoreOut">—</div>
 
           <div class="pill">Category</div>
@@ -358,6 +358,8 @@ const formulaOut = document.getElementById("formulaOut");
 const meldInput = document.getElementById("meld_xi");
 const kmThumb = document.getElementById("kmThumb");
 const kmModalImg = document.getElementById("kmModalImg");
+   const riskTitleEl = document.getElementById("riskTitle");
+const riskHeaderEl = document.getElementById("riskHeader"); // only if you added it
 
 // If you add id="riskTitle" to the pill, this will auto-update the pill title on tab switch.
 const riskTitleEl = document.getElementById("riskTitle");
@@ -435,7 +437,9 @@ function setModel(key) {
   const src = MODELS[ACTIVE_KEY].kmSrc;
 if (kmThumb && src) kmThumb.src = src;
 if (kmModalImg && src) kmModalImg.src = src;
-
+const newTitle = MODELS[ACTIVE_KEY].title;
+if (riskTitleEl) riskTitleEl.textContent = newTitle;
+if (riskHeaderEl) riskHeaderEl.textContent = newTitle; // only if you added it
   document.querySelectorAll(".tab").forEach(btn => btn.classList.remove("active"));
   const tabId = key === "1y" ? "tab-1y" : key === "90d" ? "tab-90d" : "tab-3y";
   const tabEl = document.getElementById(tabId);
